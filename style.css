@@ -1,0 +1,312 @@
+:root{
+    --first: #000000;
+    --second: #1E1E1E;
+    --third: #006312;
+    --four: #008001;
+    --five: #009200;
+    --six: #49B618;
+    --seven: white;
+}body{
+    background-color: var(--first);
+    color: var(--seven);
+    overflow-x: hidden;
+    overflow-y: visible;
+    margin: 0;
+    padding: 0;
+}html{
+    font-family: sans-serif;
+}nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}nav span img{
+    width: 8rem;
+    height: 2rem;
+}nav .set{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-right: 0.5rem;
+}nav .list_holder ul{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}nav .list_holder ul li{
+    cursor: pointer;
+    font-size: 1.09em;
+    display: inline;
+}nav .list_holder ul li:hover{
+    color: var(--third);
+}header{
+    position: relative;
+}header .init{
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}header .init img{
+    width: 100%;
+    height: 45rem;
+}.cover{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}header .head{
+    padding: 1rem;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}header .head h1 span, .head p span{
+    color: var(--six);
+    font-weight: 800;
+}header .head button{
+    background-color: var(--four);
+    color: var(--seven);
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1em;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+}header .head button:active{
+    opacity: 0.8;
+}.head p{
+    font-size: 1.1em;
+    line-height: 2rem;
+}.myTips{
+    background-color: var(--third);
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    margin-top: 25rem;
+}.myTips h1{
+    text-align: center;
+    background-color: var(--first);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}.tipCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}.first-card,.second-card,.third-card,.fourth-card{
+    background-color: var(--second);
+    width: 70%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.9rem;
+}.first-card p,.second-card p,.third-card p,.fourth-card p{
+    width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    line-height: 2rem;
+    font-size: 1.25em;
+}.first-card h2,.third-card h2,.fourth-card h2{
+    width: 100%;
+    text-align: center;
+}.muscle_group{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+}.muscle_group .img_class{
+    position: absolute;
+    z-index: -1;
+}.muscle_group .img_class img{
+    width: 100%;
+    height: 100rem;
+}.muscle_group h1{
+    text-align: center;
+}.cover1{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}.muscle_tip{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-left: 0.5rem;
+}.firstCard, .secondCard,.thirdCard,.fourthCard,.fifthCard,.sixthCard{
+    background-color: var(--second);
+    width: 60%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.9rem;
+}.firstCard p, .secondCard p,.thirdCard p,.fourthCard p,.fifthCard p,.sixthCard p{
+    text-align: center;
+}.firstCard h2, .secondCard h2,.thirdCard h2,.fourthCard h2,.fifthCard h2,.sixthCard h2{
+    text-align: center;
+}.encourage{
+    margin-top: 30rem;
+    margin-bottom: 18rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}.encourage .img_enc{
+     position: absolute;
+    z-index: -1;
+}.encourage .img_enc img{
+      width: 100%;
+    height: 35rem;
+}.encourage h1{
+    margin-top: 30%;
+    text-align: center;
+}.last_init{
+    background-color: var(--four);
+    border-radius: 1rem;
+    padding: 0.7rem 1rem;
+}.last_init button{
+    background-color: var(--second);
+    color: var(--seven);
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1em;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+}.formHold{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--third);
+    border-radius: 0.5rem;
+    padding: 1rem 0.5rem;
+    gap: 0.6rem;
+}.formHold label{
+    font-size: 1.2em;
+}.formHold input{
+    padding: 0.4rem 1rem;
+    width: 100%;
+    border-radius: 0.2rem;
+    outline: 0;
+    border: 0;
+    margin-top: 0.5rem;
+    font-size: 1em;
+}.formHold #myWeight::placeholder{
+    position: absolute;
+    right: 2rem;
+}.formHold #myHeight::placeholder{
+    position: absolute;
+    right: 2rem;
+}#openUp img{
+    width: 1.8rem;
+    height: 2rem;
+}#openUp{
+    display: none;
+    cursor: pointer;
+}#myList{
+    display: none;
+}footer{
+    margin-top: 20rem;
+    padding: 0.5rem;
+}footer .moving{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}footer .logo{
+    width: 50%;
+}footer .logo img{
+    width: 100%;
+}footer p{
+    display: inline;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    font-size: 1.1em;
+    line-height: 2rem;
+}footer .whatsapp img,footer .instagram img, footer .snapchat img,footer .tiktok img, footer .linkedin img{
+    height: 3rem;
+    cursor: pointer;
+}footer .over{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}@media screen and (max-width:360px) {
+    #openUp{
+        display: block;
+        position: relative;
+    }nav .list_holder ul li:nth-child(4),nav .list_holder ul li:nth-child(3){
+        display: none;
+    }#myList{
+        position: absolute;
+        right: 1rem;
+        background-color: var(--second);
+        border-radius: 0.5rem;
+        width: 5rem;
+        margin: 0;
+        padding: 0;
+        display: none;
+    }#myList ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        position: relative;
+        right: 2rem;
+    }#myList ul li:hover{
+    color: var(--third);
+    }.first-card,.second-card,.third-card,.fourth-card{
+    width: 90%;
+}.firstCard, .secondCard,.thirdCard,.fourthCard,.fifthCard,.sixthCard{
+    width: 70%;
+}.formHold input{
+    width: 90%;
+}#myList.hide{
+    display: flex;
+}
+}@media screen and (min-width:768px) {
+    nav span img{
+    width: 11rem;
+    height: 3rem;
+}header .init{
+    min-width: 100%;
+}nav .list_holder ul li{
+    font-size: 1.2em;
+}.myTips{
+    margin-top: 40%;
+}.first-card,.second-card,.third-card,.fourth-card{
+    width: 50%;
+}.second-card p{
+    text-align: center;
+}.second-card h2{
+    text-align: center;
+}.muscle_group .img_class{
+    min-width: 100%;
+}.firstCard, .secondCard,.thirdCard,.fourthCard,.fifthCard,.sixthCard{
+    width: 30%;
+}.muscle_group .img_class img{
+    height: 100%;
+}.encourage{
+    margin-top: 50%;
+}.encourage .img_enc{
+   min-width: 100%;
+}.encourage h1{
+    margin-top: 20%;
+    text-align: center;
+}footer .logo{
+    width: 40%;
+}footer p{
+    font-size: 1.3em;
+}
+}@keyframes flooring{
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}.scroll{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: transform 1s ease;
+}.show{
+    opacity: 1;
+    transform: translateY(0);
+
+}
