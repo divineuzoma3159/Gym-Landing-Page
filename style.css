@@ -216,13 +216,18 @@
     text-align: center;
     overflow-wrap: break-word;
     word-wrap: break-word;
-}.test h1::before{
-    content: "";
-    width: 50%;
+}.test .overing{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}.test .overing .line{
+    background-color: var(--four);
+    width: 90%;
     height: 0.2rem;
-    background-color: var(--six);
     position: absolute;
-    margin-top: 2.5rem;
+    bottom: 0.5rem;
 }.FirstCom,.SecondCom,.ThirdCom{
     background-color: var(--second);
     padding: 1rem;
@@ -303,8 +308,6 @@
     font-size: 1.2em;
 }.formHold textarea{
     width: 90%;
-}.test h1::before{
-    width: 80%;
 }.muscle_group .img_class img{
     height: 120rem;
 }
@@ -341,8 +344,8 @@
     width: 40%;
 }footer p{
     font-size: 1.3em;
-}.test h1::before{
-    width: 25%;
+}.test .overing .line{
+    width: 40%;
 }.muscle_group .img_class img{
     height: 55rem;
 }.head p{
