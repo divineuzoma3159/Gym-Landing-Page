@@ -197,6 +197,7 @@
     border: 0;
     margin-top: 0.5rem;
     font-size: 1em;
+    font-family: 'Poppins';
 }.formHold textarea{
     width: 100%;
     font-size: 1.2em;
