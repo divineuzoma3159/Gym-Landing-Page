@@ -13,8 +13,10 @@
     overflow-y: visible;
     margin: 0;
     padding: 0;
+}body button{
+     font-family: 'Poppins';
 }html{
-    font-family: sans-serif;
+    font-family: 'Poppins';
 }nav{
     display: flex;
     justify-content: space-between;
@@ -75,14 +77,22 @@
     overflow-wrap: break-word;
     word-wrap: break-word;
 }.myTips{
-    background-color: var(--third);
     display: flex;
     flex-direction: column;
     padding: 0.5rem;
     margin-top: 25rem;
+    border-radius: 0.5rem;
+}.myTips::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(anastase-maragos-7kEpUPB8vNk-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+    z-index: -1;
 }.myTips h1{
     text-align: center;
-    background-color: var(--first);
     padding: 0.5rem;
     border-radius: 0.5rem;
 }.tipCard{
@@ -100,6 +110,7 @@
     overflow-wrap: break-word;
     word-wrap: break-word;
     line-height: 2rem;
+    text-align: center;
     font-size: 1.25em;
 }.first-card h2,.third-card h2,.fourth-card h2{
     width: 100%;
@@ -121,7 +132,7 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.1);
     z-index: 1;
 }.muscle_tip{
     display: flex;
@@ -192,7 +203,7 @@
     margin-top: 0.5rem;
     outline: 0;
     border: 0;
-    font-family: sans-serif;
+    font-family: 'Poppins';
 }.formHold textarea::placeholder{
     left: 1rem;
     position: absolute;
@@ -247,31 +258,39 @@
 }footer{
     margin-top: 20rem;
     padding: 0.5rem;
-}footer .moving{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-}footer .logo{
-    width: 50%;
-}footer .logo img{
-    width: 100%;
 }footer p{
-    display: inline;
     overflow-wrap: break-word;
     word-wrap: break-word;
     font-size: 1.1em;
     line-height: 2rem;
+     text-align: center;
 }footer .whatsapp img,footer .instagram img, footer .snapchat img,footer .tiktok img, footer .linkedin img{
     height: 3rem;
     cursor: pointer;
-}footer .over{
+    margin-right: 0.3rem;
+}.footer_holder{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}.socials{
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
+}.img_holds img{
+    width: 50%;
+}.img_holds{
+    display: flex;
+    justify-content: center;
+}.socials a{
+    color: var(--seven);
+    text-decoration: none;
+    cursor: pointer;
+}.socials a:visited{
+    color: var(--seven);
+}.socials a:hover{
+    text-decoration: underline;
 }@media screen and (max-width:480px) {
     #openUp{
         display: block;
@@ -283,7 +302,7 @@
         right: 1rem;
         background-color: var(--second);
         border-radius: 0.5rem;
-        width: 5rem;
+        width: 6rem;
         margin: 0;
         padding: 0;
         display: none;
@@ -310,29 +329,38 @@
     width: 90%;
 }.muscle_group .img_class img{
     height: 120rem;
-}
+}header .init img{
+    height: 40rem;
+    }
 }@media screen and (min-width:768px) {
     nav span img{
     width: 11rem;
     height: 3rem;
-}header .init{
-    min-width: 100%;
+}header .init img{
+    width: 80rem;
+    height: 30rem;
 }nav .list_holder ul li{
     font-size: 1.2em;
 }.myTips{
     margin-top: 40%;
-}.first-card,.second-card,.third-card,.fourth-card{
-    width: 50%;
+}.second-card,.third-card{
+    width: 85%;
+    height: 90%;
 }.second-card p{
     text-align: center;
 }.second-card h2{
     text-align: center;
+}.fourth-card p{
+    line-height: 3rem;
+}.fourth-card,.first-card{
+     width: 80%;
+     padding: 2rem 1rem;
+}.first-card p{
+    line-height: 2rem;
 }.muscle_group .img_class{
     min-width: 100%;
 }.firstCard, .secondCard,.thirdCard,.fourthCard,.fifthCard,.sixthCard{
     width: 30%;
-}.muscle_group .img_class img{
-    height: 100%;
 }.encourage{
     margin-top: 50%;
 }.encourage .img_enc{
@@ -340,10 +368,11 @@
 }.encourage h1{
     margin-top: 20%;
     text-align: center;
-}footer .logo{
-    width: 40%;
 }footer p{
     font-size: 1.3em;
+}.footer_holder{
+    display: flex;
+    flex-direction: row;
 }.test .overing .line{
     width: 40%;
 }.muscle_group .img_class img{
@@ -352,6 +381,14 @@
     font-size: 1.4em;
 }.FirstCom,.SecondCom,.ThirdCom{
     padding-left: 2rem;
+}.tipCard{
+    display: grid;
+    grid-template-columns: repeat(2,1fr) ;
+    place-items: center;
+    gap: 10px;
+    align-items: stretch;
+}.socials{
+    width: 90%;
 }
 }@keyframes flooring{
     0%{
