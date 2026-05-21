@@ -6,253 +6,219 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProFitness</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800&family=Barlow:wght@300;400;500&family=Space+Mono&display=swap" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <nav>
-            <span><img src="ChatGPT Image Feb 21, 2026, 04_47_16 PMs.png" alt="logo"></span>
-            <div class="set">
-            <div class="list_holder">
-            <ul>
-                <li>Home</li>
-                <li onclick="moveIn1()">Tips</li>
-                <li onclick="moveIn2()">Programs</li>
-                <li onclick="moveIn3()">Contact</li>
-            </ul>
-            </div>
-            <div id="openUp">
-                <img src="menu.png" alt="">
-                <div id="myList">
-                    <ul>
-                        <li onclick="moveIn2()">Programs</li>
-                        <li onclick="moveIn3()">Contact</li>
-                    </ul>
-                </div>
-            </div>
-                <!--  -->
-            </div>
-    
-        </nav>
-        <div class="head">
-        <h1>Start your <span>Fitness Journey</span></h1>
-        <h1 class="sep">Build strength and confidence with <span> ProFitness</span></h1>
-        <p>Beginner Friendly workouts designed to help you build strength,
-            stay consistent, and feel comfortable starting your fitness journey.
+    <div class="toast" id="toast">Info received — let's get to work 💪</div>
+
+<!-- NAV SECTION -->
+<nav>
+  <div class="nav-logo">PRO<span>FITNESS</span></div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#tips">Tips</a></li>
+    <li><a href="#exercises">Programs</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="#join">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('join').scrollIntoView({behavior:'smooth'})">Join Now</button>
+  <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- HERO SECTION -->
+<section id="hero">
+  <div class="hero-bg">
+    <img src="victor-freitas-WvDYdXDzkhs-unsplash.jpg" alt="Athlete training" />
+  </div>
+  <div class="hero-content">
+    <p class="hero-tag">Beginner Friendly · Build Real Strength</p>
+    <h1 class="hero-h1">START<br/>YOUR<br/><em>FITNESS</em><br/>JOURNEY</h1>
+    <p class="hero-sub">Structured workouts designed to help you build strength, stay consistent, and feel confident — from your very first rep.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="document.getElementById('join').scrollIntoView({behavior:'smooth'})">Join Now</button>
+      <button class="btn-ghost" onclick="document.getElementById('exercises').scrollIntoView({behavior:'smooth'})">View Programs</button>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat-item"><div class="stat-num">5×</div><div class="stat-lbl">Weekly Training Days</div></div>
+    <div class="stat-item"><div class="stat-num">6</div><div class="stat-lbl">Muscle Groups Covered</div></div>
+    <div class="stat-item"><div class="stat-num">0</div><div class="stat-lbl">Experience Required</div></div>
+  </div>
+</section>
+
+<!-- TIPS SECTION  -->
+<section id="tips">
+  <!--  -->
+  <div class="inner">
+    <p class="sec-label reveal">Beginner Guidance</p>
+    <h2 class="sec-title reveal">What You<br/><span>Need to Know</span></h2>
+    <!--  -->
+    <div class="tips-grid">
+      <div class="tip-card reveal reveal-d1">
+        <div class="tip-num">01</div>
+        <h3 class="tip-title">Form First, Always</h3>
+        <p class="tip-text">Real progress comes from perfect form. Build a solid foundation before adding weight. Stay in a calorie deficit and take proper rest between sets — these are the three pillars of beginner gains.</p>
+      </div>
+      <div class="tip-card reveal reveal-d2">
+        <div class="tip-num">02</div>
+        <h3 class="tip-title">Structured Plan</h3>
+        <p class="tip-text">
+          <strong style="color:var(--white)">Monday</strong> — Back, Lats &amp; Arms<br/>
+          <strong style="color:var(--white)">Tuesday</strong> — Shoulders &amp; Chest<br/>
+          <strong style="color:var(--white)">Wednesday</strong> — Legs &amp; Abs<br/>
+          <strong style="color:var(--white)">Friday</strong> — Back, Lats &amp; Arms<br/>
+          <strong style="color:var(--white)">Saturday</strong> — Shoulders, Chest &amp; Legs
         </p>
-        <button onclick="joinNow()">Join Now</button>
+      </div>
+      <div class="tip-card reveal reveal-d3">
+        <div class="tip-num">03</div>
+        <h3 class="tip-title">Supportive Environment</h3>
+        <p class="tip-text">Most beginners worry about being judged at the gym. The reality? People are there to help and encourage you. Leave the anxiety at the door — you belong there from day one.</p>
+      </div>
+      <div class="tip-card reveal reveal-d4">
+        <div class="tip-num">04</div>
+        <h3 class="tip-title">Track Everything</h3>
+        <p class="tip-text">Log your workouts and meals. Knowing your calorie intake keeps you on track for a deficit. What gets measured gets improved — and consistency compounds over time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCHEDULE SECTION -->
+<div class="schedule-strip reveal">
+  <div class="schedule-inner">
+    <div class="schedule-label-block">
+      <span class="small">Weekly</span>
+      <span class="big">Schedule</span>
+    </div>
+    <div class="schedule-days">
+      <div class="day-block"><span class="day-name">MON</span><span class="day-focus">Back · Lats · Arms</span></div>
+      <div class="day-block"><span class="day-name">TUE</span><span class="day-focus">Shoulders · Chest</span></div>
+      <div class="day-block"><span class="day-name">WED</span><span class="day-focus">Legs · Abs</span></div>
+      <div class="day-block"><span class="day-name">FRI</span><span class="day-focus">Back · Lats · Arms</span></div>
+      <div class="day-block"><span class="day-name">SAT</span><span class="day-focus">Shoulders · Chest · Legs</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- EXERCISES SECTION -->
+<section id="exercises">
+  <div class="inner">
+    <p class="sec-label reveal">Muscle Group Breakdown</p>
+    <h2 class="sec-title reveal">The <span>Exercises</span></h2>
+    <div class="exercises-layout">
+      <div class="exercises-left reveal">
+        <div class="exercises-photo">
+          <img src="victor-freitas-Yuv-iwByVRQ-unsplash.jpg" alt="Strength training" />
+          <div class="exercises-photo-badge">2× Till Failure</div>
         </div>
-        <div class="init">
-             <div class="cover"></div>
-            <img src="victor-freitas-WvDYdXDzkhs-unsplash.jpg" alt="cover-image">
+      </div>
+      <div class="muscle-list reveal reveal-d2">
+        <div class="muscle-item">
+          <span class="muscle-name">Back &amp; Lats</span>
+          <div class="muscle-exercises"><span>Lat Pulldowns</span><span>Pull Ups</span><span>Bent Over Rows</span><span class="note">2 sets each · till failure</span></div>
         </div>
-    </header>
-    <main>
-        <section class="scroll">
-            <!--  -->
-            <div class="myTips" id="myTips">
-                <h1>Advisements</h1>
-                <div class="tipCard">
-                <!-- First card -->
-                <div class="first-card">
-                    <h2>Beginner-friendly guidance</h2>
-                    <p>When working out make sure you have a good form  
-                        because clear progress comes when have a good form,  
-                        make sure you're in a calorie-deficit and take rests in between sets. 
-                    </p>
-                </div>
-                <!-- Second card -->
-                <div class="second-card ">
-                    <h2>Structured work-out plan</h2>
-                    <p>&bull; Monday - Back + Lats + Arms</p>
-                    <p>&bull; Tuesday - Shoulders + Chest</p>
-                    <p>&bull; Wednesday - Legs + Abs</p>
-                    <p>&bull; Friday - Back and Lats + Arms</p>
-                    <p>&bull; Saturday - Shoulders + Chest </p>
-                </div>
-                <!-- Third card -->
-                <div class="third-card ">
-                    <h2>Supportive Environment</h2>
-                    <p>Most people do not like going to the gym because
-                        of thier anxieties that people will judge them but it's the opposite
-                        instead they help and encourage you, so there's no need for hesitation.
-                    </p>
-                </div>
-                <!-- Fourth card -->
-                <div class="fourth-card">
-                    <h2>Track your progress</h2>
-                    <p>When working out it is advisable to track your workout and your meals
-                        in order to be aware of how many calories you're taking if you're in a calorie deficit. 
-                    </p>
-                </div>
-                <!-- ending of the div making it to go in rows -->
-                </div>
-                <!-- Ending div to the tips section -->
-            </div>
-        </section>
-        <!--  -->
-            <section class="scroll">
-            <!--  -->
-            <div class="muscle_group" id="muscleGroup">
-                <!--  --> 
-                <div class="img_class">
-                      <div class="cover1"></div>
-                    <img src="brett-jordan-U2q73PfHFpM-unsplash.jpg" alt="Musclegroup">
-                </div>
-                <h1>Exercises for each muscle group </h1>
-                <div class="muscle_tip">
-                <!-- First card -->
-                <div class="firstCard ">
-                    <h2>Back & Lats</h2>
-                    <p>Lat pulldowns</p>
-                    <p>Pull ups</p>
-                    <p>Bent over rows </p>
-                    <p>Each of them 2x till failure</p>
-                </div>
-                <!-- Second card -->
-                <div class="secondCard">
-                    <h2>Shoulders</h2>
-                    <p>Lateral raises</p>
-                    <p>Front raises</p>
-                    <p>Skull crusher</p>
-                    <p>Each of them 2x till failure</p>
-                </div>
-                <!-- Third card -->
-                <div class="thirdCard ">
-                    <h2>Arms</h2>
-                    <p>Bicep curls</p>
-                    <p>Harmer curles</p>
-                    <p>Over Head triceps extension</p>
-                    <p>Each of them 2x till failure</p>
-                </div>
-                <!-- Fourth card -->
-                <div class="fourthCard">
-                    <h2>Legs</h2>
-                    <p>Squats</p>
-                    <p>Standing calves raises</p>
-                    <p>Romanian Deadlift</p>
-                    <p>Each of them 2x till failure</p>
-                </div>
-                 <!-- Fifth card -->
-                <div class="fifthCard">
-                    <h2>Chest</h2>
-                    <p>Over head press</p>
-                    <p>Incline dumbell press</p>
-                    <p>Dips</p>
-                    <p>Each of them 2x till failure</p>
-                </div>
-                <!-- Sixth card -->
-                <div class="sixthCard">
-                    <h2>Abs</h2>
-                    <p>Plank (for core)</p>
-                    <p>Hanging leg raises</p>
-                    <p>Russian twists</p>
-                    <p>Each of them 2x till failure</p>
-                </div>
-                <!--  -->
-                </div>
-                <!-- Ending div to the Program section -->
-            </div>
-        </section>
-        <!--  -->
-        <section class="scroll">
-            <div class="encourage">
-                <div class="img_enc">
-                <img src="anastase-maragos-9dzWZQWZMdE-unsplash.jpg" alt="Encourage">
-            </div>
-            <h1>Everyone starts somewhere you are not behind</h1>
-            <h2 style="text-align: center;">You don't need to be fit to start JUST START</h2>
-            <!--  -->
-            </div>
-        </section>
-        <!--  -->
-        <section class="scroll">
-            <div class="test">
-                <div class="overing">
-                    <div class="line"></div>
-                <h1>What our clients say</h1>
-                    </div>
-                <!--First Comment-->
-                <div class="FirstCom">
-                    <h3> <i> "ProFitness made it easy for me to start working out without feeling overwhelmed."</i></h3>
-                    <p>&hybull; Alex</p>
-                </div>
-                <!-- Second Comment -->
-                   <div class="SecondCom">
-                    <h3> <i> "The exercises are simple and perfect for beginners like me." </i></h3>
-                    <p>&hybull; Sarah</p>
-                </div>
-                <!--Third Comment  -->
-                 <div class="ThirdCom">
-                    <h3> <i> "I finally feel confident starting my fitness journey."</i></h3>
-                    <p>&hybull; Daniel</p>
-                </div>
-                <!-- Ending div in the testimonial section -->
-            </div>
-        </section>
-        <!--  -->
-        <section class="scroll">
-            <div class="last_init" id="lastInit">
-                <h1>Join us</h1>
-               <h2>Ready to transform your physique?</h2>
-                <h2>Start today and build a routine that is consistent</h2>
-                <form id="myForm">
-                <div class="formHold" id="formHold">
-                    <div>
-                    <label for="myName">Enter your name:</label><br>
-                    <input type="text" id="myName" placeholder="Enter your name" required>
-                    </div>
-                    <div>
-                    <label for="myEmail">Enter your email:</label><br>
-                    <input type="email" id="myEmail" placeholder="Enter your email" required>
-                    </div>
-                    <div style="margin-left: 1.5rem;">
-                    <label for="myMsg" >Enter your Fitness goals:</label><br>
-                    <textarea id="myMsg" cols="25" rows="4" placeholder="start typing here" required></textarea>
-                    </div>
-                    <div>
-                    <button id="myCancel">Start Training</button>
-                    </div>
-                </div>
-            </form>
-            <!--  -->
-            </div>
-            <!--  -->
-        </section>
-    </main>
-    <footer>
-        <div class="footer_holder">
-            <!--  -->
-        <div class="img_holds">
-        <img src="ChatGPT Image Feb 21, 2026, 04_47_16 PMs.png" alt="logo">
+        <div class="muscle-item">
+          <span class="muscle-name">Shoulders</span>
+          <div class="muscle-exercises"><span>Lateral Raises</span><span>Front Raises</span><span>Skull Crushers</span><span class="note">2 sets each · till failure</span></div>
         </div>
-        <!--  -->
-        <div class="socials">
-            <!--  -->
-            <div> 
-                <p class="contact">contact me: </p>
-        <p>
-            <a href="mailto:uzoma3159@gmail.com" target="_blank" >uzoma3159@gmail.com</a> 
-            or
-            <a href="https://wa.me/2348164049992" target="_blank">+2348164049992</a>
-        </p>
+        <div class="muscle-item">
+          <span class="muscle-name">Arms</span>
+          <div class="muscle-exercises"><span>Bicep Curls</span><span>Hammer Curls</span><span>Overhead Triceps Extension</span><span class="note">2 sets each · till failure</span></div>
         </div>
-          <!--  -->
-        <div>
-        <p>social icons:</p>
-        <span class="whatsapp"><img src="whatsapp.png" alt="whatsapp"></span>
-        <span class="instagram"><img src="instagram.png" alt="instagram"></span>
-        <span class="snapchat"><img src="snapchat.png" alt="snapchat"></span>
-        <span class="tiktok"><img src="tiktok.png" alt="tiktok"></span>
-        <span class="linkedin"><img src="linkedin.png" alt="linkedin"></span>
+        <div class="muscle-item">
+          <span class="muscle-name">Legs</span>
+          <div class="muscle-exercises"><span>Squats</span><span>Standing Calf Raises</span><span>Romanian Deadlift</span><span class="note">2 sets each · till failure</span></div>
         </div>
+        <div class="muscle-item">
+          <span class="muscle-name">Chest</span>
+          <div class="muscle-exercises"><span>Overhead Press</span><span>Incline Dumbbell Press</span><span>Dips</span><span class="note">2 sets each · till failure</span></div>
         </div>
-        <!--  -->
+        <div class="muscle-item">
+          <span class="muscle-name">Abs &amp; Core</span>
+          <div class="muscle-exercises"><span>Plank</span><span>Hanging Leg Raises</span><span>Russian Twists</span><span class="note">2 sets each · till failure</span></div>
         </div>
-    </footer>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MOTIVATIONAL SECTION -->
+<div class="moto-section">
+  <div class="moto-bg"><img src="anastase-maragos-9dzWZQWZMdE-unsplash.jpg" alt="Motivation" /></div>
+  <div class="moto-content reveal">
+    <h2 class="moto-h">Everyone Starts<br/><em>Somewhere.</em><br/>You Are Not Behind.</h2>
+    <p class="moto-sub">You don't need to be fit to start — just start</p>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="inner">
+    <p class="sec-label reveal">Social Proof</p>
+    <h2 class="sec-title reveal">What Clients<br/><span>Say</span></h2>
+    <div class="testimonials-grid">
+      <div class="testi-card reveal reveal-d1"><div class="testi-quote">"</div><p class="testi-text">ProFitness made it easy for me to start working out without feeling overwhelmed.</p><span class="testi-author">— Alex</span></div>
+      <div class="testi-card reveal reveal-d2"><div class="testi-quote">"</div><p class="testi-text">The exercises are simple and perfect for beginners like me. I saw results in weeks.</p><span class="testi-author">— Sarah</span></div>
+      <div class="testi-card reveal reveal-d3"><div class="testi-quote">"</div><p class="testi-text">I finally feel confident starting my fitness journey. The structure made all the difference.</p><span class="testi-author">— Daniel</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM SECTION -->
+<section id="join">
+  <div class="inner">
+    <div class="join-layout">
+      <div class="join-left reveal">
+        <p class="sec-label">Get Started</p>
+        <h2 class="sec-title">Ready to<br/><span>Transform?</span></h2>
+        <p class="join-sub">Fill in your details and we'll set you up with a routine built around your goals. No experience needed — just commitment.</p>
+        <div class="perks">
+          <div class="perk">Personalised beginner program</div>
+          <div class="perk">Nutrition &amp; calorie deficit guide</div>
+          <div class="perk">Form tutorials for every exercise</div>
+          <div class="perk">Supportive community access</div>
+        </div>
+      </div>
+      <div class="reveal reveal-d2">
+        <form id="joinForm" class="join-form" onsubmit="handleSubmit(event)">
+          <div class="field"><label for="nameInput">Your Name</label><input type="text" id="nameInput" placeholder="e.g. Alex Johnson" required /></div>
+          <div class="field"><label for="emailInput">Email Address</label><input type="email" id="emailInput" placeholder="alex@example.com" required /></div>
+          <div class="field"><label for="goalInput">Your Fitness Goal</label><textarea id="goalInput" rows="4" placeholder="Tell us what you want to achieve…" required></textarea></div>
+          <button type="submit" class="submit-btn">Start Training →</button>
+          <p class="form-note">No spam, ever. We'll only send what matters.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">PRO<span>FITNESS</span></div>
+      <div class="footer-tagline">Built for beginners. Designed for results.</div>
+    </div>
+    <div class="footer-socials">
+      <a href="https://wa.me/2348164049992" target="_blank" class="social-btn" title="WhatsApp">WA</a>
+      <a href="#" class="social-btn" title="Instagram">IG</a>
+      <a href="#" class="social-btn" title="TikTok">TT</a>
+      <a href="#" class="social-btn" title="Snapchat">SC</a>
+      <a href="#" class="social-btn" title="LinkedIn">LI</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 ProFitness. All rights reserved.</span>
+    <div class="footer-contact">
+      <a href="mailto:uzoma3159@gmail.com">uzoma3159@gmail.com</a>
+      <span style="color:var(--border);margin:0 0.8rem">|</span>
+      <a href="https://wa.me/2348164049992">+234 816 404 9992</a>
+    </div>
+  </div>
+</footer>
+
     <script src="script.js"></script>
 </body>
-
 </html>
